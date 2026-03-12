@@ -1,0 +1,132 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:          #f0ede8;
+  --card:        #ffffff;
+  --border:      #d4cfc8;
+  --theme:       #b20cb2;
+  --theme2:      #48be72;
+  --text:        #1a1a1a;
+  --muted:       #6b6560;
+  --radius:      16px;
+  --shadow:      0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg);
+  font-family: 'Georgia', serif;
+  color: var(--text);
+  padding: 2rem 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2.25rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+
+.card h1 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  color: var(--theme);
+  margin-bottom: 0.35rem;
+}
+
+.card .subtitle {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--text);
+  background: #faf9f7;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: var(--theme);
+  box-shadow: 0 0 0 3px rgba(44, 95, 138, 0.12);
+  background: #fff;
+}
+
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 1.75rem;
+  background: var(--theme);
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn:hover  { background: var(--theme2); }
+.btn:active { transform: scale(0.98); }
+
+
+.card-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.card-footer a {
+  color: var(--theme);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card-footer a:hover {
+  text-decoration: underline;
+}
+
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.75rem 0 1.25rem;
+}
